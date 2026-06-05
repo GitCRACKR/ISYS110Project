@@ -4,7 +4,8 @@ import os
 #I consistenly had an issue where I could not locate the csv file and I went to
 #w3 schools but it was a computer file/folder thing.
 #this code lets the program keep going with an exception instead of just immediately breaking.
-#Original code from me
+
+#Code that did not work because there was a file location error:
 #import csv
 
 
@@ -28,7 +29,7 @@ import os
 #It was kind of unspecific i suppose
 
 #Original code from me over
-#CHATGPT CODE BELOW
+#___________________This is AI Generated Code from CHATGPT_____________
 # Always use the folder containing this script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -50,7 +51,7 @@ def read_teams():
         print("Expected location:", file_path)
 
     return teams
-#CHATGPT CODE ENDS
+#______________________________CHATGPT CODE OVER________________________
 
 #after I saw the CHATGPT code I replicated it with the player csv file so it would be the same function 
 def read_players():
@@ -332,7 +333,7 @@ def edit_player():
     else:
         print("\nInvalid choice.")
         return
-#CHATGPT CODE STARTS
+#________________________________________AI GENERATED CODE FROM CHATGPT STARTS_______________________________
 #I was able to find out how to gather all of the data and inputs of what needed to be changed but i just could not figure out how to actually implement the changes
 #Basically all chatgpt i used was just for the outside files and csv organization
     file_path = os.path.join(BASE_DIR, "player.csv")
@@ -350,7 +351,7 @@ def edit_player():
 
         writer.writeheader()
         writer.writerows(players)
-#CHATGPT CODE ENDS
+#_________________________________________________CHATGPT CODE ENDS_____________________________________________
     print("\nPlayer updated successfully.")
 #the actual menu of what is happening that starts out the entire thing
 #python has all of the functions defined above so now it is just about executing them when they are chosen
